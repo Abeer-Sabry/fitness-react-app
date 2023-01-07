@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 
 function App() {
   return (
-    <Box width="400px" sx={{ width: { xl: "1488px" } }}>
+    <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
       <Navbar />
       <Pages />
       <Footer />

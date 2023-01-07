@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import { Box } from "@mui/material";
 // ---- Components
 import HeroBanner from "../../components/HeroBanner/HeroBanner";
+import SearchExercises from "../../components/SearchExercises/SearchExercises";
+import Exercises from "../../components/Exercises/Exercises";
+
 const Home = () => {
-  // const [state, setstate] = useState(initialState);
+  const [exercises, setExercises] = useState([]);
+  const [bodyPart, setBodyPart] = useState("all");
+  console.log("body", bodyPart);
   return (
-    <div>
+    <Box>
       <HeroBanner />
-    </div>
+      <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+      <Exercises setExercises={setExercises} bodyPart={bodyPart} exercises={exercises} />
+    </Box>
   );
 };
 

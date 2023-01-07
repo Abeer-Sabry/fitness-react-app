@@ -1,49 +1,55 @@
 import React from "react";
 // ---- Material-Ui
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 // ---- Banner-Image
-import banner from "../../assets/images/banner.png";
+import HeroBannerImage from "../../assets/images/banner.png";
 
 const HeroBanner = () => {
   return (
-    // <Stack
-    // direction="row"
-    // sx={{
-    //   flexDirection: { md: "row", sm: "column" },
-    //   justifyContent: "none",
-    // }}
-    // >
-    <Box
-      sx={{
-        mt: { xl: "122px", xs: "70px" },
-        ml: { sm: "50px" },
-      }}
-      position="relative"
-      p="20px"
-    >
+    <Box sx={{ mt: { lg: "212px", xs: "70px" }, ml: { sm: "50px" } }} position="relative" p="20px">
       <Typography color="#FF2625" fontWeight="600" fontSize="26px">
         Fitness Club
       </Typography>
-      <Typography fontWeight={600} sx={{ fontSize: { lg: "40px", xs: "36px" } }}>
-        Sweat, Smile <br /> and Repeat
+      <Typography
+        fontWeight={700}
+        sx={{ fontSize: { lg: "44px", xs: "40px" } }}
+        mb="15px"
+        mt="15px"
+      >
+        Sweat, Smile <br />
+        And Repeat
       </Typography>
-      <Typography fontSize="20px" lineHeight="35px" mb={3}>
-        check out the most effective exercises
+      <Typography fontSize="22px" fontFamily="Alegreya" lineHeight="35px">
+        Check out the most effective exercises personalized to you
       </Typography>
-      <Button variant="contained" color="error" href="#exercises">
-        Explore Exercises
-      </Button>
+      <Stack>
+        <a
+          href="#exercises"
+          style={{
+            marginTop: "40px",
+            textDecoration: "none",
+            width: "200px",
+            textAlign: "center",
+            background: "#FF2625",
+            padding: "14px",
+            fontSize: "22px",
+            textTransform: "none",
+            color: "white",
+            borderRadius: "4px",
+          }}
+        >
+          Explore Exercises
+        </a>
+      </Stack>
       <Typography
         fontWeight={600}
-        color="#ff2625"
-        sx={{ opacity: "0.05", display: { lg: "block", xs: "none" } }}
-        fontSize="200px"
+        color="#FF2625"
+        sx={{ opacity: "0.1", display: { lg: "block", xs: "none" }, fontSize: "200px" }}
       >
-        Exercises
+        Exercise
       </Typography>
-      <img src={banner} alt="banner" className="hero-banner-img " />
+      <img src={HeroBannerImage} alt="hero-banner" className="hero-banner-img" />
     </Box>
-    // </Stack>
   );
 };
 
